@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Connect</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px helvetica;
+    line-height: 1.8;
+    color: #818181;
+  }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+  .jumbotron {
+    background-color: #7dbc39;
+    color: #fff;
+    padding: 100px 25px;
+    font-family: helvetica;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f2f1e8;
+  }
+  .logo-small {
+    color: #303030;
+    font-size: 50px;
+  }
+  .logo {
+    color: #7dbc39;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #7dbc39;
+  }
+  .carousel-indicators li {
+    border-color: #7dbc39;
+  }
+  .carousel-indicators li.active {
+    background-color: #7dbc39;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #7dbc39;
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #7dbc39;
+    background-color: #fff !important;
+    color: #7dbc39;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #7dbc39 !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #303030;
+    color: #fff;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: #000000;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: helvetica;
+  }
+
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="MainPage.html">Home</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="LosAngeles.html">Los Angeles</a></li>
+        <li><a href="SanDiego.html">San Diego</a></li>
+        <li><a href="SanFrancisco.html">San Francisco</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>Subscribe!</h1>
+  <p>Subscribe to my website and recieve updates about the latest and greatest spots to visit!</p>
+  <form>
+    <div class="input-group">
+      <input type="email" class="form-control" size="30" placeholder="Email Address" required>
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-danger">Subscribe</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- Recomendations -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>Have any recomendations of your own?</h2><br>
+      <h4>Type in your own recomendations and they just might get added to my list!</h4><br>
+      <input type="text" class="form-control" size="50" placeholder="Your Recomendation" required>
+      <br><button class="btn btn-default btn-lg">Send for review</button>
+    </div>
+    <div class="col-sm-4">
+      <img src ="Project Photos/Connect/globe_PNG52.png" class="img-fluid" alt="Responsive image"></span>
+  </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span><img src="Project Photos/Connect/19-198669_checkbox-check-mark-hd-png-download.png" height="200"/></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>Take a Vote</h2><br>
+      <h4><strong>Vote</strong> for your favorite city on my list:</h4><br>
+      <div>
+        <input type="radio" id="LA" name="city">
+        <label for="LosAngeles">Los Angeles</label><br>
+        <input type="radio" id="SD" name="city">
+        <label for="SanDiego">San Diego</label><br>
+        <input type="radio" id="SF" name="city">
+        <label for="SanFrancisco">San Francisco</label>
+        <div class="input-group-btn">
+          <button type="button" class="btn btn-danger">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<h2 class="text-center">Some Upcomming Travel Ideas</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <a href="https://www.mtl.org/en" target=”_blank”>
+        <img src="Project Photos/Connect/Upcomming/Montreal-Canada-feature.jpg" class="center-block" style="width:40%" alt="Image"></a>
+        <h4>Montreal, Canada</h4>
+      </div>
+      <div class="item">
+        <a href="https://www.visitlondon.com/" target=”_blank”>
+        <img src="Project Photos/Connect/Upcomming/london.jpg" class="center-block" style="width:40%" alt="Image"></a>
+        <h4>London, England</h4>
+      </div>
+      <div class="item">
+        <a href="https://www.esmadrid.com/en" target=”_blank”>
+        <img src="Project Photos/Connect/Upcomming/spain.jpg" class="center-block" style="width:40%" alt="Image"></a>
+        <h4>Madrid, Spain</h4>
+      </div>
+      <div class="item">
+        <a href="https://www.discoverhongkong.com/us/index.jsp" target=”_blank”>
+        <img src="Project Photos/Connect/Upcomming/Hong-Kong.jpg" class="center-block" style="width:40%" alt="Image"></a>
+        <h4>Hong Kong, China</h4>
+      </div>
+      <div class="item">
+        <a href="https://www.bali.com/" target=”_blank”>
+        <img src="Project Photos/Connect/Upcomming/bali.jpg" class="center-block" style="width:40%" alt="Image"></a>
+        <h4>Bali, Indonesia</h4>
+      </div>
+      <div class="item">
+        <a href="https://www.visitdubai.com/en" target=”_blank”>
+        <img src="Project Photos/Connect/Upcomming/dubai.jpg" class="center-block" style="width:40%" alt="Image"></a>
+        <h4>Duabi, United Arab Emirates</h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT ME</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>If you have any questions about the information on this website, please feel free to contact me!</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Los Angeles, California</p>
+      <p><span class="glyphicon glyphicon-phone"></span> (123) 456-7890</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> myemail@CollegeTraveller.com</p>
+    </div>
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+      <br>
+      <div class="row">
+        <div class="col-md-10 form-group">
+          <button class="btn pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="contact" class="container">
+  <h3 class="text-center">Connect to our Social Media</h3>
+  <p class="text-center"><em>Follow us on Facebook, Twitter, and Instagram</em></p>
+
+<div class="container-fluid text-center">
+  <div class="center">
+    <div class="col-sm-4">
+      <p><h3>Facebook</h3></p>
+      <a href="https://www.facebook.com/" target=”_blank”>
+      <img src="Project Photos/Connect/facebook.png" class="center" style="width:20%" alt="Image"></a>
+  </div>
+    <div class="col-sm-4">
+      <p><h3>Twitter</h3></p>
+        <a href="https://www.twitter.com/" target=”_blank”>
+      <img src="Project Photos/Connect/Twitter.png" class="center" style="width:20%" alt="Image"></a>
+    </div>
+    <div class="col-sm-4">
+      <p><h3>Instagram</h3></p>
+      <a href="https://www.instagram.com/" target=”_blank”>
+      <img src="Project Photos/Connect/insta.png" class="center" style="width:20%" alt="Image"></a>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid bg-4 text-center">
+  <p>CollegeTraveller.com</a></p>
+  <p>Made By George Yeremian</p>
+</footer>
+
+</body>
+</html>
